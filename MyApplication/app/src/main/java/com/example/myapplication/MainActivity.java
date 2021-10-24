@@ -29,7 +29,8 @@ public class MainActivity extends AppCompatActivity {
         btn_stone=findViewById(R.id.btn_stone);
         btn_paper=findViewById(R.id.btn_paper);
         btn_mora=findViewById(R.id.btn_mora);
-        btn_mora.setOnClickListener(new View.OnClickListener() {
+        btn_mora.setOnClickListener(new View.OnClickListener()
+        {
             @Override
             public void onClick(View v){
                 //判断字串是否是空白来要求输入姓名
@@ -69,7 +70,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         // radioGroup = findViewById(R.id.radioGroup);
-
-
     }
 }

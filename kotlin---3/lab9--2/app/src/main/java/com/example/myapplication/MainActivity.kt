@@ -44,14 +44,20 @@ class MainActivity : AppCompatActivity() {
                 else -> runCoroutines()
             }
         }
-
     }
+    private fun showToast(msg: String) {
+        Toast.makeText(this,msg,Toast.LENGTH_SHORT).show()
+    }
+
     private  fun runCoroutines(){
         tv_weight.text = "標準體重\n無"
         tv_fat.text = "體脂肪 \n無"
         tv_bmi.text = "BMI \n無"
+
+        //初始化進度條
         progressBar2.progress = 0
         tv_progress.text = "0%"
+        //顯示進度條
         ll_progress.visibility = View.VISIBLE
         GlobalScope.launch(Dispatchers.Main) {
             var progress = 0
@@ -79,8 +85,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun showToast(msg: String) {
-        Toast.makeText(this,msg,Toast.LENGTH_SHORT).show()
-    }
+
 
 }
